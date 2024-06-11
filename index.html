@@ -1,3 +1,27 @@
-<h1>
-  hello world!
-</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>مشاركة المحتوى</title>
+</head>
+<body>
+    <h1>مشاركة هذا المحتوى</h1>
+    <p>هذا هو المحتوى الذي ترغب في مشاركته.</p>
+    <button onclick="shareContent()">مشاركة</button>
+
+    <script>
+        function shareContent() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'مشاركة المحتوى',
+                    text: 'هذا هو المحتوى الذي أريد مشاركته.',
+                    url: 'https://example.com'
+                })
+                .then(() => console.log('مشاركة ناجحة'))
+                .catch((error) => console.log('حدث خطأ في المشاركة:', error));
+            } else {
+                alert('وظيفة المشاركة غير مدعومة في هذا المتصفح.');
+            }
+        }
+    </script>
+</body>
+</html>
