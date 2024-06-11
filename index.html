@@ -10,6 +10,10 @@
     <br>
     <button onclick="print()">طباعة</button>
     <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // الحصول على قيمة البارامتر
+        const name = urlParams.get('name'); // "John"
         function shareContent() {
             if (navigator.share) {
                 navigator.share({
