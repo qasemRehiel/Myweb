@@ -165,11 +165,11 @@
             border-radius: 8px;
         }
         @media (max-width: 800px){
-            #book_side, #trans, .tabs{
+            #pdfViewerSection{
                 display: none
             }
-            #article_side{
-                width: 100%;
+            #articlesSection{
+                width: 85%;
                 display: inline-block;
             }
         }
@@ -199,10 +199,10 @@
             <div style="height: 15px;"></div>
             <div id="articles"></div>
         </div>
-        <div id="book_side" class="side">
+        <div id="book_side" class="side" style="display: none;">
             <h1>الكتب المرفوعة</h1>
             <div class="search-bar">
-                <input type="text" id="bookSearch" placeholder="بحث عن الكتب..." oninput="searchBooks()" style="display: none;">
+                <input type="text" id="bookSearch" placeholder="بحث عن الكتب..." oninput="searchBooks()">
             </div>
             <input type="file" id="pdfUpload" accept="application/pdf">
             <button onclick="uploadPDF()">رفع الكتاب</button>
