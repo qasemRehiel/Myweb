@@ -181,7 +181,7 @@
         </div>
     </div>
     <div class="section" id="articlesSection">
-        <div id="article_side" class="side" style="display: none;">
+        <div id="article_side" class="side">
             <h1>كتابة المقالات</h1>
             <div class="search-bar">
                 <input type="text" id="articleSearch" placeholder="بحث عن المقالات..." oninput="searchArticles()">
@@ -193,7 +193,7 @@
         <div id="book_side" class="side">
             <h1>الكتب المرفوعة</h1>
             <div class="search-bar">
-                <input type="text" id="bookSearch" placeholder="بحث عن الكتب..." oninput="searchBooks()">
+                <input type="text" id="bookSearch" placeholder="بحث عن الكتب..." oninput="searchBooks()" style="display: none;">
             </div>
             <input type="file" id="pdfUpload" accept="application/pdf">
             <button onclick="uploadPDF()">رفع الكتاب</button>
