@@ -164,12 +164,21 @@
             overflow-y: auto;
             border-radius: 8px;
         }
+        @media (max-width: 800px){
+            #book_side, #trans, .tabs{
+                display: none
+            }
+            #article_side{
+                width: 100%;
+                display: inline-block;
+            }
+        }
     </style>
 </head>
 <body>
 <script src="jquery-1.10.0.min.js"></script>
 <div class="container">
-    <div class="section" style="padding: 0px;background-color: #004d40; color: #fff; text-align: center;">
+    <div class="section tabs" style="padding: 0px;background-color: #004d40; color: #fff; text-align: center;">
         <div class="tab" onclick="page('book_side')">
             <img src="book.svg">
         </div>
